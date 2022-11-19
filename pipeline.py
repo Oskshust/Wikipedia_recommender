@@ -18,7 +18,7 @@ COLUMNS = ["title","summary","links","categories","references"] # todo: add sect
 def download_article():
     try:
         return wikipedia.page(title=wikipedia.random(1))
-    except: #dziwnie ta paczka działa, czasem artykułu nie ma z tytułem który został wylosowany
+    except: #dziwnie ta paczka działa, czasem artykułu nie ma z tytułem który został wylosowany; Oskar: tak, no właśnie też się na to natknąłem przy tych próbach pobierania w jupyterze, ale except continue jakoś mi tam załatwiało robotę to tak zostawiłem
         return download_article()
 
 def preprocess_article(article):
